@@ -6,5 +6,6 @@
 
 在Windows /外置硬盘/WSL/网络盘/同步盘（如OneDrive、Obsidian Vault）种很常见
 
+>**如何忽略上传一个文件夹内的内容？**
 
 
