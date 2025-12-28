@@ -22,9 +22,12 @@
 >[!question]
 >**如何通过Obsidian来commit、push、pull等git操作？**
 
+因为之前成功建立了ssh链接，所以一直使用的时之前的ssh权限
+
 123456
 
 reload
 123465
+123456
 123456
 123456
