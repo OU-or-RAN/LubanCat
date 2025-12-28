@@ -1,4 +1,4 @@
-![](attachments/QQ_1766901259932.png)
+![](../attachments/QQ_1766901259932.png)
 这是**Git 2.35+的安全机制**：
 当仓库位于【文件系统不记录所有者】或【当前用户与目录属主不一致】时，就会报：
 >[!failure]
@@ -23,3 +23,5 @@
 >**如何通过Obsidian来commit、push、pull等git操作？**
 
 123456
+
+![](../attachments/QQ_1766911019510.png)
