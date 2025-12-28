@@ -9,3 +9,17 @@
 >**如何忽略上传一个文件夹内的内容？**
 
 
+>**注意ignore文件中的文件名不要带有空格**
+
+>[!example]
+>Daily Notes && DailyNotes
+>>前一个文件名写进gitignore后该文件夹还是被上传至了github
+>>后一个成功被忽略
+
+>[!question]
+>**如何使得MD内的图片内容可以被displayed在github或其他上面而非以链接形式展现？**
+
+>[!question]
+>**如何通过Obsidian来commit、push、pull等git操作？**
+
+123456
