@@ -101,15 +101,15 @@ Markdown支持**六级**标题，使用#符号来表示，#的数量决定了标
 等等……
 
 # 7.链接
-1. *内部链接*
+1. *内部链接（Obsidian内部的WikiLink语法）*
 	1. 没有alias：[[tasks you gonna do tomorrow]]
 	2. [[tasks you gonna do tomorrow|link to inner note]]
 	3. [[tasks you gonna do tomorrow#^315a19|link to inner note to certain line]]
 	4. directly display the content linked to：![[tasks you gonna do tomorrow#^9ae893]]
-2. *外部链接*
+2. *外部链接（标准MD链接语法）*
 	[ChatGPT](https://chatgpt.com/)
 	[Google](https://www.google.com/)
-	……
+	…… ^1510c4
 # 8.表
 | item 1 | item 2 | item 3 |
 |:------:|:------:|:------:|
