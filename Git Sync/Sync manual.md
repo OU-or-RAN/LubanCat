@@ -24,7 +24,7 @@
 
 因为之前成功建立了ssh链接，所以一直使用的时之前的ssh权限
 
-reload
+reload666
 >variables：
 >>if characters in path name is invalid
 >>if the path can be found successfully 
