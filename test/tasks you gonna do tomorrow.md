@@ -189,4 +189,4 @@ cout<<"a = "<<a<<endl;
 
 #### 2.外部链接方式
 
-![](attachments/Android_test0.png)
+![](../attachments/Android_test0.png)

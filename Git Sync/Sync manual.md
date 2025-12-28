@@ -23,5 +23,3 @@
 >**如何通过Obsidian来commit、push、pull等git操作？**
 
 123456
-
-![](../attachments/QQ_1766911019510.png)
