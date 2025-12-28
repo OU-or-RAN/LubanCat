@@ -18,7 +18,7 @@
 >**如何使得MD内的图片内容可以被displayed在github或其他上面而非以链接形式展现？**
 >
 >这里需要使用MD的标准链接语法而非WikiLink语法
->>>*[MD Grammar](../MD%20Grammar/MD%20Grammar.md#^1510c4)*
+>>>*[外部链接（标准MD链接语法）](../MD%20Grammar/MD%20Grammar.md#^1510c4)*
 >
 >**如何通过Obsidian来commit、push、pull等git操作？**
 >
