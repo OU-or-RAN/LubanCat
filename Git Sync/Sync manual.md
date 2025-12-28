@@ -7,24 +7,28 @@
 在Windows /外置硬盘/WSL/网络盘/同步盘（如OneDrive、Obsidian Vault）种很常见
 
 >**如何忽略上传一个文件夹内的内容？**
-
-
 >**注意ignore文件中的文件名不要带有空格**
 
 >[!example]
 >Daily Notes && DailyNotes
->>前一个文件名写进gitignore后该文件夹还是被上传至了github
->>后一个成功被忽略
+>>- 前一个文件名写进gitignore后该文件夹还是被上传至了github
+>>- 后一个成功被忽略
 
 >[!question]
 >**如何使得MD内的图片内容可以被displayed在github或其他上面而非以链接形式展现？**
+>这里需要使用MD的标准链接语法而非WikiLink语法
+>>>*[[MD Grammar]]*
 
 >[!question]
 >**如何通过Obsidian来commit、push、pull等git操作？**
+>这里涉及到ssh连接是否成功的问题
+>>>*[SSH查找.ssh标准流程](SSH查找.ssh标准流程.md)*
+
+
 
 因为之前成功建立了ssh链接，所以一直使用的时之前的ssh权限
 
-reload666
->variables：
->>if characters in path name is invalid
->>if the path can be found successfully 
+>**variables**：
+>>- if characters in path name is invalid
+>>- if the path can be found successfully 
+

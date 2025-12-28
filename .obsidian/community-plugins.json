@@ -10,5 +10,6 @@
   "obsidian-citation-plugin",
   "obsidian-outliner",
   "obsidian-icon-folder",
-  "obsidian-git"
+  "obsidian-git",
+  "obsidian-markdown-export-plugin"
 ]

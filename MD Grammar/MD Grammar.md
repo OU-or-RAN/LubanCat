@@ -106,7 +106,6 @@ Markdown支持**六级**标题，使用#符号来表示，#的数量决定了标
 	2. [[tasks you gonna do tomorrow|link to inner note]]
 	3. [[tasks you gonna do tomorrow#^315a19|link to inner note to certain line]]
 	4. directly display the content linked to：![[tasks you gonna do tomorrow#^9ae893]]
-	
 2. *外部链接*
 	[ChatGPT](https://chatgpt.com/)
 	[Google](https://www.google.com/)
@@ -142,8 +141,10 @@ bool feasible(long long s, const vector<int>& a, long long k) {
 >注意两者区别
 >可通过GitHub查看
 1. **内部链接**
+`**这种属于Wikilink语法，是Obsidian生态下的语法，其他平台不一定兼容**`
 ![[Android_test0 1.png]]
 2. **外部链接**
+`**这是markdown标准链接语法，全球通用**`
 ![](attachments/Android_test0.png)
 
 # 11.Math Formular
