@@ -28,3 +28,7 @@
 
 reload
 666666
+
+>variables：
+>>if characters in path name is invalid
+>>if the path can be found successfully 
