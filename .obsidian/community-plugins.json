@@ -1,6 +1,5 @@
 [
   "obsidian-zotero-desktop-connector",
-  "obsidian-git",
   "obsidian-style-settings",
   "dataview",
   "table-editor-obsidian",
@@ -10,5 +9,6 @@
   "obsidian-hover-editor",
   "obsidian-citation-plugin",
   "obsidian-outliner",
-  "obsidian-icon-folder"
+  "obsidian-icon-folder",
+  "obsidian-git"
 ]
