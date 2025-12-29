@@ -127,7 +127,7 @@ Git 会重新读取：
     
 - HOME 恢复为：
     
-    `C:\Users\吴啸宇`
+    `C:\Users\用户名`
     
 - `.ssh` 能正常创建
     
@@ -158,7 +158,7 @@ Git 会重新读取：
 
 你会看到类似输出：
 
-`OpenSSH_9.6p1, ... debug1: Reading configuration data /c/Users/吴啸宇/.ssh/config debug1: Offering public key: /c/Users/吴啸宇/.ssh/id_ed25519 debug1: Known hosts file: /c/Users/吴啸宇/.ssh/known_hosts`
+`OpenSSH_9.6p1, ... debug1: Reading configuration data /c/Users/用户名/.ssh/config debug1: Offering public key: /c/Users/用户名/.ssh/id_ed25519 debug1: Known hosts file: /c/Users/用户名/.ssh/known_hosts`
 
 从这里可以看到：
 
