@@ -7,6 +7,7 @@
 >该DAG中的节点只能是commit对象吗，还是tree对象也可以？如果是的话tree为什么可以？
 
 ![](../attachments/QQ_1766999530778.png)
+
 >[!questoion] 
 >git checkout 命令的操作对象不仅仅可以是name of branch，也可以是commit对象本身？如果是，那commit为什么会有名字，他不就是只有一个commit ID吗？
 >为什么每一个commit都要保存tree
