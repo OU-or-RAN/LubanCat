@@ -23,3 +23,6 @@
 >这里的A、B、C、D仅仅是节点名吗，还是branch名、Tag又或者是commit ID？
 >`git reset --hard B`
 >这里为什么直接用B这个节点名
+>>**是commit ID**
+
+
