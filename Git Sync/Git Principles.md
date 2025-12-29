@@ -10,5 +10,8 @@
 >[!questoion] 
 >git checkout 命令的操作对象不仅仅可以是name of branch，也可以是commit对象本身？如果是，那commit为什么会有名字，他不就是只有一个commit ID吗？
 >为什么每一个commit都要保存tree
+>HEAD指向对象的变化全过程，什么叫当前commit对象？
+
+
 
 
