@@ -1,4 +1,224 @@
-# SSH 到底按什么规则查找 `.ssh`？（权威标准流程）
+# 一、什么操作会触发「Git 环境刷新」？
+
+先说明一句：
+
+> **Git for Windows 本质上是一套运行在 MSYS2（类 Unix 子系统）上的 Git。**
+
+所以：
+
+- Git 命令运行在 **MSYS2 Shell 环境**
+    
+- HOME / PATH 等变量  
+    由 shell 初始化脚本判断和设置  
+    （并不等同于 Windows 系统环境）
+    
+
+也就是说：
+
+> **环境刷新本质上是“Shell 重建 + 环境变量重新解析”。**
+
+---
+
+## 1️⃣ 以下行为会触发环境刷新（最常见）
+
+### ① 重新启动 Git Bash
+
+✔ 这是最直接、100%生效的方法
+
+因为：
+
+- Bash 将重新运行初始化脚本
+    
+- 重新解析 HOME 来源
+    
+- 重新创建 `$HOME`
+    
+
+包括执行：
+
+`/etc/profile ~/.bash_profile`
+
+---
+
+### ② 修改系统环境变量后，重新启动应用
+
+例如：
+
+- 设置 HOME
+    
+- 修改 USERPROFILE
+    
+- PATH 变更
+    
+
+当你：
+
+✔ 关闭 Git Bash  
+✔ 再次打开
+
+Git 会重新读取：
+
+`Windows 环境变量 → Shell 初始化 → Bash 环境`
+
+---
+
+### ③ 切换终端（CMD / PowerShell / Git Bash）
+
+不同终端 → 不同环境模型
+
+- CMD：读取 `%USERPROFILE%`
+    
+- PowerShell：也读取 Windows 变量
+    
+- Git Bash：内部解析 + 兼容层
+    
+
+切换终端，本质上等于加载不同配置。
+
+---
+
+### ④ 修改 Git Bash Profile / 配置文件
+
+例如：
+
+`~/.bashrc ~/.bash_profile /etc/profile`
+
+并重启 Bash
+
+---
+
+### ⑤ 重装 Git / 切换版本
+
+因为安装器会：
+
+- 重写默认配置
+    
+- 更新 MSYS2 运行层
+    
+- 可能重置 HOME 解析逻辑
+    
+
+---
+
+### ⑥ 修改登录用户 / 语言环境
+
+因为：
+
+- Locale 影响 Unicode 解析
+    
+- 用户目录名称变化
+    
+- HOME 定位逻辑变化
+    
+
+---
+
+## 2️⃣ 为什么你“设置 HOME 后”看似触发了解决？
+
+原因是：
+
+✔ 你修改了 Windows 环境变量  
+✔ 并重新启动了 Git 运行环境  
+✔ 触发 Shell 重新解析 HOME / USERPROFILE
+
+最终：
+
+- Git Bash 不再错误解析乱码路径
+    
+- HOME 恢复为：
+    
+    `C:\Users\吴啸宇`
+    
+- `.ssh` 能正常创建
+    
+
+所以问题解决
+
+但不是因为：
+
+「HOME 的值被使用」
+
+而是因为：
+
+> **“环境被重新初始化 → 定位逻辑正常工作了”**
+
+---
+
+# 二、如何查看 SSH 实际使用的路径？（最关键）
+
+给你几种“绝对准确、可验证”的方法。
+
+---
+
+## 方法 1：查看 SSH 的 debug 输出（推荐）
+
+执行：
+
+`ssh -vvv git@github.com`
+
+你会看到类似输出：
+
+`OpenSSH_9.6p1, ... debug1: Reading configuration data /c/Users/吴啸宇/.ssh/config debug1: Offering public key: /c/Users/吴啸宇/.ssh/id_ed25519 debug1: Known hosts file: /c/Users/吴啸宇/.ssh/known_hosts`
+
+从这里可以看到：
+
+✔ key 来源路径  
+✔ known_hosts 路径  
+✔ config 路径
+
+**这就是 SSH 实际使用的路径，没有歧义。**
+
+---
+
+## 方法 2：查看 HOME 解析结果
+
+Git Bash:
+
+`echo $HOME`
+
+CMD:
+
+`echo %USERPROFILE%`
+
+如果一致，则：
+
+> SSH 默认使用 `%USERPROFILE%\.ssh`
+
+即：
+
+`C:\Users\你的用户名\.ssh\`
+
+---
+
+## 方法 3：显式输出 SSH 默认搜索规则
+
+执行：
+
+`ssh -G git@github.com`
+
+从输出中可以找到：
+
+`identityfile /c/Users/xxx/.ssh/id_ed25519 userknownhostsfile /c/Users/xxx/.ssh/known_hosts`
+
+这也是绝对真实的值。
+
+---
+
+## 方法 4：查看 Agent 是否加载 key
+
+`ssh-add -l`
+
+可判断 key 是否被代理管理
+
+---
+
+## 方法 5：查看正在使用的 config 文件
+
+看看是否存在：
+
+`C:\Users\用户名\.ssh\config`
+
+# 三、SSH 到底按什么规则查找 `.ssh`？（权威标准流程）
 
 OpenSSH 解析顺序如下：
 
