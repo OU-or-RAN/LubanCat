@@ -17,4 +17,9 @@
 1. 创建指向该commit的branch
 2. 创建该commit的Tag
 
+![](../attachments/QQ_1767004957825.png)
 
+>[!question]
+>这里的A、B、C、D仅仅是节点名吗，还是branch名、Tag又或者是commit ID？
+>`git reset --hard B`
+>这里为什么直接用B这个节点名
