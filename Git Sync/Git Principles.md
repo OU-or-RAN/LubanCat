@@ -13,6 +13,8 @@
 >为什么每一个commit都要保存tree
 >HEAD指向对象的变化全过程，什么叫当前commit对象？
 
-
+想找到某commit有两种方式：
+1. 创建指向该commit的branch
+2. 创建该commit的Tag
 
 
