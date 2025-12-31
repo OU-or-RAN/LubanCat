@@ -2,6 +2,22 @@
 > **Git详解**
 >>[*Git Principles*](Git%20Principles.md)
 
+
+#### 1. 创建远程Repository
+
+打开浏览器登录到GitHub网址：https://github.com/
+
+1. 如有账号则直接创建remote repo
+		1.  登录到home页面
+			home页面如下：
+			![](../attachments/QQ_1767167631694.png)
+			找不到的话可以点击左上角的三条横杠
+			![](../attachments/QQ_1767167806769.png)
+			点击后可以看到菜单，在菜单中点击home跳转到home页面
+			![](../attachments/QQ_1767167829980.png)
+		2.  创建new repo
+			点击红框的两个按钮都可以进行仓库的创建
+			![](../attachments/QQ_1767168518680%201.png)进入创建页面后，创建仓库名，添加仓库描述（也可暂时不添加），点击选择是否公开仓库，公开选public，不公开选private，**注意：公开的话其他人也可以访问获取到你的仓库，不公开的话只有自己可以读写**，根据自己项目的具体需求来选择；                                        ![](../attachments/Pasted%20image%2020251231161908.png)
 #### 同步操作过程log
 ![](../attachments/QQ_1766901259932.png)
 这是**Git 2.35+的安全机制**：
