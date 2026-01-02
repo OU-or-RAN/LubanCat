@@ -8,7 +8,7 @@
 打开浏览器登录到GitHub网址：https://github.com/
 
 1. 注册账号（如有账号则可不用注册账号）并直接创建repo
-	1. 创建new repo
+	1. 创建远程new repo
 	   1.1 登录到home页面
 	   - home页面如下：
 	     ![](../attachments/QQ_1767167631694.png)
@@ -42,7 +42,35 @@
 				  - **No license（无许可证）**: 不添加任何许可证。
 				  - **选择许可证**: 根据项目的开放程度选择合适的许可证。
 			3. **Create repository（创建仓库）**: 完成以上配置后，点击此按钮即可创建新的GitHub仓库。
-   1. 
+			   ![](../attachments/QQ_1767341547477.png)
+   1. 创建本地new repo
+      
+      2.1 创建本地repo文件夹，这里我选择在Obsidian的vaults文件夹下创建“ouorranForTest”文件夹
+      ![](../attachments/QQ_1767341644183.png)
+      2.2 在此文件夹下打开Git Bash终端
+      - 进入到“ouorranForTest”文件夹下右键，点击**显示更多选项**
+        ![](../attachments/QQ_1767342105017.png)
+      - 点击**Open Git Bash here**，打开Git Bash终端
+        ![](../attachments/Pasted%20image%2020260102162536.png)
+        
+	  2.3 使用Git命令初始化本地repo
+      ![](../attachments/QQ_1767343023351.png)
+      至此，本地repo就已经创建完成了。
+	  1. 绑定远程repo与本地repo（**ssh方式**）
+	     - 点击GitHub头像，然后点击“setting”
+	       ![](../attachments/QQ_1767343461605.png)
+	     - 跳转到写一个页面后点击左侧侧边栏的“SSH and GPG keys”
+	       ![](../attachments/QQ_1767343576807.png)
+	     
+	     - 页面跳转后点击按钮“new SSH key”
+	       ![](../attachments/QQ_1767343673716.png)
+	     - 设置key的标题，可以为电脑名也可以为项目名，根据自己需求设定，如何获得第二步的密钥呢？请参考以下步骤
+	       ![](../attachments/QQ_1767343854359.png)
+	       - 
+        
+
+
+
 
 #### 同步操作过程log
 ![](../attachments/QQ_1766901259932.png)
