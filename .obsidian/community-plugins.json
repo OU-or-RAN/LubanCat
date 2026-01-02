@@ -4,12 +4,9 @@
   "dataview",
   "table-editor-obsidian",
   "obsidian-excalidraw-plugin",
-  "obsidian-tasks-plugin",
   "obsidian-admonition",
   "obsidian-hover-editor",
   "obsidian-citation-plugin",
   "obsidian-outliner",
-  "obsidian-icon-folder",
-  "obsidian-git",
-  "obsidian-markdown-export-plugin"
+  "obsidian-git"
 ]
