@@ -45,7 +45,7 @@
 			      2.2 在此文件夹下打开Git Bash终端  
 				      - 进入到“ouorranForTest”文件夹下右键，点击**显示更多选项**  
 				        ![](../attachments/QQ_1767342105017.png)  
-				      - 点击**Open Git Bash here**，打开Git Bash终端  
+				      - 点击**Open Git Bash here**，打开Git Bash终端   
 				        ![](../attachments/Pasted%20image%2020260102162536.png)  
 				  2.3 使用Git命令初始化本地repo  
 				      ![](../attachments/QQ_1767343023351.png)    
@@ -110,7 +110,7 @@
 |---|---|
 |**提示 `error: remote origin already exists`**|表示已关联过远程仓库，可先执行 `git remote -v` 查看。若需重置，运行：`git remote remove origin`，再重新关联。|
 |**本地主分支叫 `master`，远程是 `main`**|推送时需指定分支映射：`git push -u origin master:main`|
-|**提示 `failed to push some refs`**|通常因远程仓库有本地没有的文件（如初始化的README）。先执行：`git pull origin main --allow-unrelated-histories` 合并，再 `git push`。|
+|**提示 `failed to push some refs`**|通常因远仓库有本地没有的文件（如初始化的README）。先执行：`git pull origin main --allow-unrelated-histories` 合并，再 `git push`。|
 |**推送时提示权限错误**|**HTTPS方式**：检查访问令牌是否正确。  <br>**SSH方式**：运行 `ssh -T git@github.com` 测试连接。|
 
 #### 同步操作过程log
