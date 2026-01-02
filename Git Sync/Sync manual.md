@@ -66,11 +66,51 @@
 	       ![](../attachments/QQ_1767343673716.png)
 	     - 设置key的标题，可以为电脑名也可以为项目名，根据自己需求设定，如何获得第二步的密钥呢？请参考以下步骤
 	       ![](../attachments/QQ_1767343854359.png)
-	       - 
-        
-
-
-
+	       - 打开Git Bash， 输入以下命令创建密钥并一直回车：
+	         `ssh-keygen -t ed25519 -C “your_email@example.com”`
+	       或者（区别只在使用了不同的加密算法ed25519/RSA）
+	         `ssh-keygen -t rsa -C “your_email@example.com”`
+	         ![](../attachments/QQ_1767344564883.png)
+	       - 注意公钥存储路径，看到randomart image出现说明创建成功了，这里测试我使用的是RSA
+	         ![](../attachments/QQ_1767345072020.png)
+	       - 进入公钥存储目录，打开**.pub**文件，并复制文件内容，这就是创建GitHub SSH key需要的公钥。
+		 - 回到GitHub创建SSH key页面，粘贴**.pub**文件内容点击“Add SSH key”后，再通过账户验证即可
+		   ![](../attachments/QQ_1767345642784.png)
+		 - 创建成功
+		   ![](../attachments/QQ_1767345797651.png)
+		 - 回到刚刚创建的远程仓库ouorran-for-test，点击“Code”，复制SSH链接（**要从HTTPS链接切换到SSH链接**）
+		   ![](../attachments/QQ_1767345965472.png)
+		 - 回到Git Bash,输入以下命令并回车：
+		   `git remote add origin "远程仓库的SSH链接"`
+		 - 如果出现以下报错，直接复制粘贴终端给出的命令后回车即可，这个问题是**系统不信任本地仓库所在位置**而引起的，该命令就是将本地仓库所在目录标记为安全，标记成功后即解决。
+		   ![](../attachments/QQ_1767346192299.png)
+		 - 连接成功
+		   ![](../attachments/QQ_1767346692626.png)
+	   1. 测试
+	      1. 输入以下命令检查是否连接成功：
+	         `ssh -T git@github.com`
+	         如输出以下内容则成功：
+	         ![](../attachments/QQ_1767347682505.png)
+	      2. 在本地仓库目录下创建test.txt文本文件
+	         ![](../attachments/QQ_1767346790626.png)
+	      3. 输入内容
+	         ![](../attachments/Pasted%20image%2020260102174202.png)
+	      4. Git Bash中依次输入以下命令并逐个回车
+	         ```Git Bash
+	         git add .
+	         git commit -m "the 1st push test"
+	         git push -u origin main --force(如有添加README文件加上--force参数强制将本地repo同步至远程)
+	         ```
+	         
+	      5. 查看远程仓库，可以看到推送成功
+	         ![](../attachments/Pasted%20image%2020260102181236.png)
+	      6. 远程repo上编辑修改并提交test.txt文件：
+	         ![](../attachments/QQ_1767349078835.png)
+	      7. Git Bash输入以下命令并回车：
+	         `git pull`
+	         ![](../attachments/QQ_1767349252554.png)
+	      8. 本地仓库打开test.txt文件，可以看到同步成功：
+	         ![](../attachments/QQ_1767349283614.png)
 
 #### 同步操作过程log
 ![](../attachments/QQ_1766901259932.png)
