@@ -28,7 +28,15 @@ Markdown支持**六级**标题，使用#符号来表示，#的数量决定了标
 > 第二段中的第一行
 > 123
 > 456
+  
+Markdown 换行主要有几种方式，其效果和兼容性各不相同。为了方便你理解，我将这几种方式整理成表格：
 
+|方法|在Markdown源码中的输入方式|渲染后的效果与说明|
+|---|---|---|
+|**段落换行**|连续按**两次回车**，在两个段落间插入一个空行[](https://cloud.tencent.cn/developer/article/2181229?from=15425)[](https://zhuanlan.zhihu.com/p/536442037)。|效果等同于HTML的 `<p>` 标签，会开始一个**新的段落**，段落之间有明显间距。|
+|**行内换行 (硬换行)**|在行尾先输入**两个空格**，再按一次回车[](http://t.zoukankan.com/mimifeng-p-3360881.html)[](https://gitee.com/pylog/blog-src/blob/master/markdown/4.md)[](https://juejin.cn/post/7174404825013026853)。|实现**单一行内换行**，新行仍属于同一段落，间距较小[](https://gitee.com/pylog/blog-src/blob/master/markdown/4.md)。|
+|**使用HTML标签**|在需要换行处直接输入 **`<br>`** 或 **`<br/>`** 标签[](https://cloud.tencent.cn/developer/article/2181229?from=15425)[](https://gitee.com/pylog/blog-src/blob/master/markdown/4.md)。|**最可靠的强制换行**方法，所有兼容Markdown的环境都支持。|
+|**编辑器快捷键** (部分编辑器支持)|在编辑时按 **`Shift` + `Enter`** (或 `Option`+`Return`)。|实质上是编辑器在行尾自动插入了两个空格或 `<br>` 标签来实现换行。|
 # 3.序列
 
 ## 1.无序序列

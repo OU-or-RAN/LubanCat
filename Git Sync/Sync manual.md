@@ -3,7 +3,7 @@
 >>[*Git Principles*](Git%20Principles.md)
 
 
-#### 1. 创建远程Repository
+#### 同步操作过程
 
 打开浏览器登录到GitHub网址：https://github.com/
 
@@ -103,6 +103,15 @@
 			 ![](../attachments/QQ_1767349252554.png)  
 		  8. 本地仓库打开test.txt文件，可以看到同步成功：  
 			 ![](../attachments/QQ_1767349283614.png)  
+			 
+##### ⚠️ **常见问题与处理**
+
+|问题|解决方案|
+|---|---|
+|**提示 `error: remote origin already exists`**|表示已关联过远程仓库，可先执行 `git remote -v` 查看。若需重置，运行：`git remote remove origin`，再重新关联。|
+|**本地主分支叫 `master`，远程是 `main`**|推送时需指定分支映射：`git push -u origin master:main`|
+|**提示 `failed to push some refs`**|通常因远程仓库有本地没有的文件（如初始化的README）。先执行：`git pull origin main --allow-unrelated-histories` 合并，再 `git push`。|
+|**推送时提示权限错误**|**HTTPS方式**：检查访问令牌是否正确。  <br>**SSH方式**：运行 `ssh -T git@github.com` 测试连接。|
 
 #### 同步操作过程log
 ![](../attachments/QQ_1766901259932.png)
